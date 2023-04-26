@@ -28,3 +28,5 @@ def get_prdiction(img_path):
 
     # Display the output
     print(prediciton)
+
+get_prdiction("./TestImages/test1.jpg")

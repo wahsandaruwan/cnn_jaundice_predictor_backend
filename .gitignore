@@ -1,3 +1,5 @@
+TestImages/
 __pycache__/
 venv/
+Model/
 .env

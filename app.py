@@ -2,7 +2,7 @@
 import os
 import uuid
 
-from UseModel import get_prdiction
+# from UseModel import get_prdiction
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from json import JSONEncoder
