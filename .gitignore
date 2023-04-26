@@ -1,5 +1,5 @@
 TestImages/
 __pycache__/
 venv/
-Model/
+Model/final_model.h5
 .env
