@@ -13,7 +13,7 @@ def get_prdiction(img_path):
     """Generate the prediction based on image provided
     """    
     # Load image
-    img = load_img(img_path, target_size=(500,500))
+    img = load_img(img_path, target_size=(255,255))
 
     # Create an input using the image
     i = img_to_array(img)/255
@@ -26,7 +26,4 @@ def get_prdiction(img_path):
     # Remove preprocessed image file
     os.remove(img_path)
 
-    # Display the output
-    print(prediciton)
-
-get_prdiction("./TestImages/test1.jpg")
+    return prediction

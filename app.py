@@ -2,7 +2,7 @@
 import os
 import uuid
 
-# from UseModel import get_prdiction
+from UseModel import get_prdiction
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from json import JSONEncoder
@@ -20,6 +20,9 @@ CORS(app)
 # Get prediction
 @app.route('/predict', methods=['POST'])
 def index():
+    # Variables
+    final = ""
+
     # Validate the image file
     if "file" not in request.files:
         return jsonify({"error": "Image not provided"}), 400
@@ -34,9 +37,14 @@ def index():
     file.save(os.path.join(os.getenv("UP_DIR"), filename))
 
     # Get the prediction
-    # prediciton = get_prdiction(os.getenv("UP_DIR")+filename)
+    prediciton = get_prdiction(os.getenv("UP_DIR")+filename)
 
-    return jsonify({"result": "prediciton"}), 200
+    if prediction == 0:
+        final = "Jaundice"
+    else:
+        final = "No Jaundice"
+
+    return jsonify({"result": final}), 200
 
 # -----Execute the app-----
 if __name__ == "__main__":
