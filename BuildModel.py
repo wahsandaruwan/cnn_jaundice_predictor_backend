@@ -19,7 +19,7 @@ for layer in base_model.layers:
 X = Flatten()(base_model.output)
 X = Dense(units=2, activation="sigmoid")(X)
 
-# -----Final model-----
+# Final model
 model = Model(base_model.input, X)
 
 # -----Compile the model-----

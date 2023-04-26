@@ -2,7 +2,7 @@
 import os
 import uuid
 
-from UseModel import get_prdiction
+from UseModel import get_prediction
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from json import JSONEncoder
@@ -37,7 +37,7 @@ def index():
     file.save(os.path.join(os.getenv("UP_DIR"), filename))
 
     # Get the prediction
-    prediction = get_prdiction(os.getenv("UP_DIR")+filename)
+    prediction = get_prediction(os.getenv("UP_DIR")+filename)
 
     if prediction == 0:
         final = "Jaundice"

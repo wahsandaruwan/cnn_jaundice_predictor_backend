@@ -9,7 +9,7 @@ from tensorflow.keras.utils import load_img, img_to_array
 model = load_model("./Model/final_model.h5")
 
 # -----Generate prediction function-----
-def get_prdiction(img_path):
+def get_prediction(img_path):
     """Generate the prediction based on image provided
     """    
     # Load image
@@ -23,7 +23,7 @@ def get_prdiction(img_path):
     # Get the prediction
     prediction = np.argmax(model.predict(input_arr))
 
-    # Remove preprocessed image file
+    # Remove image file
     os.remove(img_path)
 
     return prediction
