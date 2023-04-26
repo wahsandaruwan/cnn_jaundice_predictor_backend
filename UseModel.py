@@ -9,7 +9,7 @@ from tensorflow.keras.utils import load_img, img_to_array
 model = load_model("./Model/final_model.h5")
 
 # -----Generate prediction function-----
-def get_skin_type(img_path):
+def get_prdiction(img_path):
     """Generate the prediction based on image provided
     """    
     # Load image

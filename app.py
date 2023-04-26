@@ -2,8 +2,7 @@
 import os
 import uuid
 
-from UseModel import get_skin_type
-from PreProcessImage import pre_process_img
+from UseModel import get_prdiction
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from json import JSONEncoder
@@ -35,9 +34,9 @@ def index():
     file.save(os.path.join(os.getenv("UP_DIR"), filename))
 
     # Get the prediction
-    prediciton = get_skin_type(os.getenv("UP_DIR")+filename)
+    # prediciton = get_prdiction(os.getenv("UP_DIR")+filename)
 
-    return jsonify({"result": prediciton}), 200
+    return jsonify({"result": "prediciton"}), 200
 
 # -----Execute the app-----
 if __name__ == "__main__":
