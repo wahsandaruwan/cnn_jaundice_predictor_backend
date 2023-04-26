@@ -21,7 +21,7 @@ def get_prdiction(img_path):
     input_arr.shape
 
     # Get the prediction
-    prediciton = np.argmax(model.predict(input_arr))
+    prediction = np.argmax(model.predict(input_arr))
 
     # Remove preprocessed image file
     os.remove(img_path)

@@ -37,7 +37,7 @@ def index():
     file.save(os.path.join(os.getenv("UP_DIR"), filename))
 
     # Get the prediction
-    prediciton = get_prdiction(os.getenv("UP_DIR")+filename)
+    prediction = get_prdiction(os.getenv("UP_DIR")+filename)
 
     if prediction == 0:
         final = "Jaundice"
